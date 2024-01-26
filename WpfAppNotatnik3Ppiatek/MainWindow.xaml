@@ -9,22 +9,26 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="P_lik">
-                <MenuItem Header="Nowy"></MenuItem>
-                <MenuItem Header="Otworz"/>
+                <MenuItem Header="Nowy" 
+                          Click="MenuItem_Click_4"></MenuItem>
+                <MenuItem Header="Otworz"
+                          Click="MenuItem_Click_5"/>
                 <Separator/>
                 <MenuItem Header="Zapisz"/>
-                <MenuItem Header="Zapisz jako ..."/>
+                <MenuItem Header="Zapisz jako ..." Click="MenuItem_Click_6"/>
                 <Separator/>
                 <MenuItem Header="Zamknij" 
                           Click="MenuItem_Zamknij_Click"/>
             </MenuItem>
             <MenuItem Header="For_matowanie">
                 <MenuItem Header="Dzien/Noc" 
-                          IsCheckable="True"/>
+                          IsCheckable="True"
+                          Checked="MenuItem_Checked"
+                          Unchecked="MenuItem_Unchecked"/>
                 <MenuItem Header="Tło">
-                    <MenuItem Header="Biszkoptowe"/>
-                    <MenuItem Header="Niebieskie"/>
-                    <MenuItem Header="Jogurtowe"/>
+                    <MenuItem Header="Biszkoptowe" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="Niebieskie" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="Jogurtowe" Click="MenuItem_Click_3"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="E_dycja">
@@ -35,7 +39,11 @@
                 <MenuItem Header="Wklej"
                           Command="ApplicationCommands.Paste"/>
             </MenuItem>
+            <MenuItem Header="O programie">
+                <MenuItem Header="Autor" Click="MenuItem_Click"/>
+                <MenuItem Header="Pomoc"/>
+            </MenuItem>
         </Menu>
-        <TextBox/>
+        <TextBox x:Name="wpis_txt" TextWrapping="Wrap"/>
     </DockPanel>
 </Window>
